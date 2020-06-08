@@ -1,0 +1,35 @@
+\ProvidesPackage{probability}[2020/06/07 Comandos para probabilidades]
+
+% Paquetes requeridos
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsfonts}
+\RequirePackage{bm}
+
+% Estilos
+\providecommand{\cal}[1]{\mathcal{#1}}
+\providecommand{\bb}[1]{\mathbb{#1}}
+
+% ================= Símbolos comunes =================
+\newcommand{\om}{\Omega} % Para el espacio Omega
+\newcommand{\prob}{\bb{P}} % P de probabilidades
+\newcommand{\espProb}{(\om,\, \cal{F},\, \prob)}
+\newcommand{\dist}{\sim} % "Distribuye como"
+% ================= Símbolos comunes =================
+
+% ================= Distribuciones =================
+\DeclareBoldMathCommand{\CM}{CM} % Simbolo de la distribución cadena de Markov
+\newcommand{\CMf}[2]{% Cadena de Markov, que toma los parámetros necesarios
+\CM\left({#1},\,{#2}\right)}
+
+\DeclareBoldMathCommand{\Unif}{Unif} % Dist. Uniforme
+\newcommand{\Uniff}[2]{% Toma los argumentos para definir una dist. unif.
+\Unif\left[{#1},\,{#2}\right]}
+% ================= Distribuciones =================
+
+% ================= Comandos =================
+\newcommand{\probf}[1]{% Función de probabilidad
+\prob\left(#1\right)}
+\newcommand{\suc}[2][n]{% Función que sirve para definir las sucesiones
+\left(#2_{#1}\right)_{n\geq 0}}
+% ================= Comandos =================

@@ -1,0 +1,30 @@
+\section{Caracterización y construcción}
+
+\begin{definition}[Distribución inicial]
+Al vector de probabilidad $\mu = (\mu_{i})_{i\in I}$ definido por $\mu_{i\in I} = \probf{X_0 = i}$ le llamamos la \textbf{distribución inicial} de la cadena de Markov $X$.
+\end{definition}
+
+\begin{proposition}
+$X$ es una cadena de Markov con matriz de transición $P$ y distribución inicial $\mu$ si y solo si
+\begin{multline}
+    \probf{X_0 = i_0,\, X_1 = i_1,\, \ldots,\, X_n = i_n} \\
+    = \mu_{i_0} p_{i_0 i_1} \ldots p_{i_{n-1} i_n}
+\end{multline}
+\end{proposition}
+
+\begin{theorem}[Existencia de una CM con $\mu$ y $P$ dados]
+Sea $\mu$ una medida de probabilidad sobre $I$ y $P$ una matriz estocástica indexada por $I$. Entonces existe un espacio de probabilidad $(\om,\, \cal{F},\, \prob)$ y una sucesión $X = \suc{X}$ de variables aleatorias en este espacio tal que $X$ es una cadena de Markov con distribución inicial $\mu$ y matriz de transición $P$.
+\end{theorem}
+
+\begin{notation}
+Se escribirá $X \dist \CMf{\mu}{P}$ si $X$ es una cadena de Markov con distribución inicial $\mu$ y matriz de transición $P$.
+\end{notation}
+
+\begin{theorem}[Construcción directa de cadenas de Markov]
+Sea $\espProb$ un espacio de probabilidad en el cual están definidas variables aleatorias independientes $\suc{U}$ con distribución $\Uniff{0}{1}$ y adicionalmente una variable aleatoria $\xi_{0}$ a valores $I$ con distribución $\mu$, independiente de todas las $U_n$. Sea $\Phi:[0,\, 1] \times I \to I$ medible y definimos $\suc{X}$ mediante
+\begin{align}
+    X_0 &{}={} \xi_0 \notag \\
+    X_{n+1} &{}={} \Phi (U_n,\, X_n), \quad n \geq 0
+\end{align}
+Entonces $X \dist \CMf{\mu}{P}$ con $P$ dada por $p_{ij}~=~\probf{\Phi(U_0,\, i) = j}$
+\end{theorem}

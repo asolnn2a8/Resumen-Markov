@@ -1,0 +1,60 @@
+%%% template.tex
+%%%
+%%% This LaTeX source document can be used as the basis for your technical
+%%% paper or abstract. Intentionally stripped of annotation, the parameters
+%%% and commands should be adjusted for your particular paper - title, 
+%%% author, article DOI, etc.
+%%% The accompanying ``template.annotated.tex'' provides copious annotation
+%%% for the commands and parameters found in the source document. (The code
+%%% is identical in ``template.tex'' and ``template.annotated.tex.'')
+
+\documentclass[]{reporte}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\TOGonlineid{45678}
+\TOGvolume{0}
+\TOGnumber{0}
+\TOGarticleDOI{0}
+\TOGprojectURL{}
+\TOGvideoURL{}
+\TOGdataURL{}
+\TOGcodeURL{}
+\usepackage{color}
+%\definecolor{red}{rgb}{0.9, 0.17, 0.31}
+\usepackage{multirow}
+\usepackage{subfig}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{lipsum}
+% \input{macros/mathenv}
+\usepackage{macros/mathenv} % Paquete propio para insertar entornos matemáticos
+\usepackage{macros/probability} % Paquete propio para comandos de probabilidades
+\usepackage{macros/mathcmd} % Paquete propio para comandos usuales de Beauchef
+
+% Las eciaciones se enumeran por la sección
+\numberwithin{equation}{section}
+
+% Definición de la información del documento
+\title{Resumen del control 1 de Procesos de Markov}
+\author{}
+\pdfauthor{\theauthor}
+\renewcommand{\nombrecurso}{Prcesos de Markov}
+\renewcommand{\codigocurso}{MA5406-1}
+\renewcommand{\nombreuniversidad}{Universidad de Chile, FCFM}
+% Definición de la información del documento
+
+\begin{document}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%% CONTENIDO %%%%%%%%%%%%%%%%%
+\input{_contenido/01_recuerdo_prob}
+\input{_contenido/02_proc_est_y_CM}
+\input{_contenido/03_caract_y_constr}
+%%%%%%%%%%%%%%%%% CONTENIDO %%%%%%%%%%%%%%%%%
+
+\end{document}

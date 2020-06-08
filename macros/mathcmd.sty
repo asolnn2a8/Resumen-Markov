@@ -1,0 +1,16 @@
+\ProvidesPackage{mathcmd}[2020/06/07 Comandos usuales que se ocupan en Beauchef]
+
+% Paquetes requeridos
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsfonts}
+
+% Estilos
+\providecommand{\cal}[1]{\mathcal{#1}}
+\providecommand{\bb}[1]{\mathbb{#1}}
+
+% Conjuntos y demás
+\newcommand{\R}[1][]{% R de reales
+\bb{R}^{#1}}
+\newcommand{\N}[1][]{% N de naturales
+\bb{N}^{#1}}

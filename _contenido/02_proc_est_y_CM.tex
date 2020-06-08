@@ -1,0 +1,50 @@
+\section{Procesos estocásticos y cadenas\\
+de Markov}
+\begin{definition}[Proceso estocástico]
+Dados $(\om,\, \cal{F},\, \prob)$ y $(S,\, \cal{S})$, decimos que una sucesión $(X_n)_{n\geq0}$ de variables aleatorias es un \textbf{proceso estocástico}.
+\end{definition}
+
+\begin{definition}[Espacio de estados]
+el \textbf{espacio de estados} se denotará por $I$, qu es un conjunto numerable en donde los procesos estocásticos tomarán sus valores.
+\end{definition}
+
+
+\begin{definition}[Cadena de Markov]
+Un proceso estocástico $X = \suc{X}$ a valores en $I$ es un \textbf{proceso de Markov a tiempo discreto} si satisface la \textbf{propiedad de Markov}:
+\begin{multline}
+    \probf{X_{n+1} = i_{n+1} | X_0 = i_0,\, \ldots,\, X_n = i_n} \\
+    = \probf{X_{n+1} = i_{n+1} | X_n = i_n}
+\end{multline}
+\end{definition}
+
+\begin{proposition}
+Si $X$ es una cadena de Markov, entonces para todo $0 \leq t_0 \leq \ldots \leq t_{n+1}$ en $\N$ y todo $i_0,\, \ldots,\, i_{n+1} \in I$,
+\begin{multline}
+    \probf{X_{t_{n+1}} = i_{n+1} | X_{t_{0}} = i_0,\, \ldots,\, X_{t_{n}} = i_n} \\
+    = \probf{X_{t_{n+1}} = i_{n+1} | X_{t_n} = i_n}
+\end{multline}
+\end{proposition}
+
+\begin{definition}[Cadena de Markov homogénea]
+Sea $X$ una cadena de Marjok. Decimos que $X$ es \textbf{homogénea} si
+\begin{multline}
+    \probf{X_{m+1} = j | X_m = i}\\
+    = \probf{X_{n+1} = j | X_n = i} \quad \forall m, n \geq 0,\, i, j \in I
+\end{multline}
+\end{definition}
+
+\begin{definition}[Matriz de transición y Prob. de transición]
+De la definición anterior, la matriz $P = (p_{ij})_{i,j \in I}$ dada por $p_{ij} = \probf{X_1 = j | X_0 = i}$ le llamamos \textbf{matriz de transición} de la cadena de Markov $X$, y $p_{ij}$ es la \textbf{probabilidad de transición de $i$ a $j$}.
+\end{definition}
+
+\begin{definition}[Matriz estocástica]
+una matriz $P = (p_{ij})$ se dice \textbf{matriz estocástica} si:
+\begin{itemize}
+    \item $p_{ij} \geq 0$ para todo $i,j \in I$.
+    \item $\sum_{j\in I} p_{ij} = 1$ para todo $i\in I$.
+\end{itemize}
+\end{definition}
+
+\begin{proposition}
+Si $P$ es la matriz de transición de una cadena de Markov, entonces $P$ es matriz estocástica.
+\end{proposition}
